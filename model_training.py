@@ -22,7 +22,7 @@ def make_train_step(model, loss_fn, optimizer):
   return perform_train_step
 
 
-make_train_step(model, loss_fn, optimizer)
+train_step =  make_train_step(model, loss_fn, optimizer)
 
 
 n_epochs = 1000
