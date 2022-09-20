@@ -47,3 +47,21 @@ for epochs in range(n_epochs):
   loss = np.mean(mini_batches_losses)
 
   losses.append(loss)
+
+  
+  
+  
+  
+  
+  
+  def mini_batch(device, data_loader, step):
+  mini_batches_losses = []
+  for x_batch, y_batch in data_loader:
+    x_batch = x_batch.to(device)
+    y_batch = y_batch.to(device)
+
+    mini_batch_loss = step(x_batch, y_batch)
+    mini_batches_losses.append(mini_batch_loss)
+
+  loss = np.mean(mini_batches_losses)
+  return loss
