@@ -65,3 +65,18 @@ for epochs in range(n_epochs):
 
   loss = np.mean(mini_batches_losses)
   return loss
+
+
+
+
+n_epochs = 200
+
+losses = []
+
+for epoch in range(n_epochs):
+  loss = mini_batch(device, train_loader, train_step)
+  losses.append(loss)
+LOSS = np.mean(losses)
+print(f'Loss:{LOSS:.4f}')
+
+
